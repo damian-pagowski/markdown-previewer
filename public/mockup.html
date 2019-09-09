@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Markdown Previewer</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light window-controls  px-1 px-sm-5">
+      <a class="navbar-brand" href="#">Markdown Previewer</a>
+    
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="#"
+              >Run <i class="fa fa-play"></i>
+              </a
+            >
+          </li>
+         
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <!--  CODE EDITOR -->
+          <div class="window-container is-visible">
+            <div class="window-controls">
+              <button class="window-controls-btn close-btn"></button>
+              <button class="window-controls-btn minimize-btn"></button>
+              <button class="window-controls-btn expand-btn"></button>
+            </div>
+            <textarea class="window-content" id="editor">
+LOREM IPSUM CODE BLA</textarea
+            >
+          </div>
+          <!-- CODE EDITOR END -->
+        </div>
+
+        <div class="col-sm-6">
+          <!-- preview -->
+
+          <div class="window-container is-visible">
+            <div class="window-controls">
+              <button class="window-controls-btn close-btn"></button>
+              <button class="window-controls-btn minimize-btn"></button>
+              <button class="window-controls-btn expand-btn"></button>
+            </div>
+            <div id="preview" class="window-content preview">Lorem Ipsum</div>
+          </div>
+
+          <!-- preview end -->
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("preview").innerHTML = marked(
+        "# Marked in the browser\n\nRendered by **marked**."
+      );
+    </script>
+  </body>
+</html>

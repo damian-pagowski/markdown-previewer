@@ -1,6 +1,6 @@
 body {
   background: #4ed8b4;
-  font-family: monospace;
+  font-family:  monospace;
 }
 
 .window-container,
@@ -8,8 +8,6 @@ body {
 .row,
 .col-sm-6,
 html,
-.App,
-#root,
 body {
   height: 100%;
 }
@@ -23,7 +21,7 @@ body {
 .window-container {
   margin-top: 2%;
   width: 100%;
-  height: 85%;
+  height: 90%;
   border: 1px solid #bbb;
   border-radius: 7px;
   box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
