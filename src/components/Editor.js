@@ -1,10 +1,17 @@
 import React from 'react'
 
-function Editor () {
+function Editor (props) {
+  const handleOnChange = event => {
+    props.callback(event.target.value)
+  }
+
   return (
-    <textarea className='window-content' id='editor'>
-      LOREM IPSUM CODE BLA
-    </textarea>
+    <textarea
+      className='window-content'
+      id='editor'
+      onChange={event => handleOnChange(event)}
+      value={props.data}
+    />
   )
 }
 

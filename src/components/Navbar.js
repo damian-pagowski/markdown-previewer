@@ -6,16 +6,6 @@ function Navbar () {
       <a class='navbar-brand' href='#'>
         Markdown Previewer
       </a>
-
-      <div>
-        <ul class='navbar-nav'>
-          <li class='nav-item active'>
-            <a class='btn btn-outline-success my-2 my-sm-0' href='#'>
-              Run <i class='fa fa-play' />
-            </a>
-          </li>
-        </ul>
-      </div>
     </nav>
   )
 }

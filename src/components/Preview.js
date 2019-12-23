@@ -1,14 +1,15 @@
+import React from "react";
 
-import React from 'react'
-
-function Preview () {
+function Preview(props) {
   return (
-    <div id='preview' className='window-content preview'>
-    Lorem Ipsum
-   </div>
-  )
+    <div id="preview" className="window-content">
+      <div dangerouslySetInnerHTML={createMarkup(props.data)} />
+    </div>
+  );
 }
 
-export default Preview
+function createMarkup(data) {
+  return { __html: data };
+}
 
-
+export default Preview;

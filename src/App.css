@@ -1,29 +1,30 @@
 body {
   background: #4ed8b4;
   font-family: monospace;
+  box-sizing: border-box;
+  margin: 0;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
 }
 
-.window-container,
-.container,
-.row,
-.col-sm-6,
-html,
-.App,
-#root,
-body {
+#main-screen {
+  height: 100vh;
+}
+#panels-wrapper {
+  padding: 4rem 1rem 1rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  width: 100%;
   height: 100%;
 }
 
-.my-navbar {
-  border-radius: 7px;
-  height: 40px;
-  margin-top: 10px;
-}
 /* // Window */
 .window-container {
-  margin-top: 2%;
   width: 100%;
-  height: 85%;
+  height: 100%;
   border: 1px solid #bbb;
   border-radius: 7px;
   box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
@@ -38,48 +39,45 @@ body {
   padding: 5px;
   background: linear-gradient(rgb(226, 224, 226), rgb(199, 198, 200));
 }
-
-.window-controls-btn {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0;
-}
-
-.close-btn {
-  background: rgb(227, 69, 69);
-}
-
-.minimize-btn {
-  background: rgb(224, 178, 40);
-}
-
-.expand-btn {
-  background: rgb(0, 216, 67);
+.window-title {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .window-content {
-  padding: 10px;
-
+  margin: 4px 3px;
+  padding: 7px 10px;
   display: flex;
   flex-direction: column;
-  flex: 0 0 95%;
-  background: #000;
-  overflow-y: scroll;
-  color: green;
   font-family: console;
+  height: 100% !important;
+  overflow-y: scroll;
 }
 
-.preview {
+#preview {
   background: white;
   color: black;
+}
+
+#editor {
+  color: green;
+  background: #000;
 }
 
 .line {
   color: #fff;
   margin: 0;
   padding: 3px 5px;
+}
+
+@media (max-width: 800px) {
+  #panels-wrapper {
+    padding: 4rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    width: 100%;
+    height: 100%;
+  }
 }
