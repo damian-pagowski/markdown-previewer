@@ -2,9 +2,8 @@ import React from "react";
 
 function Preview(props) {
   return (
-    <div id="preview" className="window-content">
-      <div dangerouslySetInnerHTML={createMarkup(props.data)} />
-    </div>
+    <div id="preview" className="window-content" dangerouslySetInnerHTML={createMarkup(props.data)} />
+    
   );
 }
 
